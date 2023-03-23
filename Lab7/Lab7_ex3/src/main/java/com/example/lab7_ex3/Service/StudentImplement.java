@@ -4,6 +4,8 @@ import com.example.lab7_ex3.Model.Student;
 import com.example.lab7_ex3.Respository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ import java.util.List;
 @Controller
 public class StudentImplement implements StudentService{
     @Autowired
-    private StudentRepository studentRepository;
+    private  StudentRepository studentRepository;
 
 
     @Override
@@ -26,8 +28,8 @@ public class StudentImplement implements StudentService{
         return  students;
     }
     @Override
-    public void delete(long id) {
-        studentRepository.deleteById(String.valueOf(id));
+    public void delete(int id) {
+        studentRepository.deleteById(id);
     }
 
 

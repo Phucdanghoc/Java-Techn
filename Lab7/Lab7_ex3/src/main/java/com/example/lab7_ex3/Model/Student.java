@@ -9,11 +9,11 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "email")
+    @Column(name = "Email")
     private String email;
-    @Column(name = "age")
+    @Column(name = "Age")
     private int age;
-    @Column(name = "ieltsScore")
+    @Column(name = "IeltsScore")
     private double ieltsScore;
     public Student(int id, String name, String email, int age, double ieltsScore) {
         this.id = id;

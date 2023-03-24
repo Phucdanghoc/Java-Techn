@@ -18,7 +18,7 @@ public class Lab7Ex4Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         studentRepository.findByAgeGreaterThanEqual(24).forEach(p-> System.out.println(p.toString()));
 
-        System.out.println(studentRepository.countByIeltsScore(7));
+        System.out.println(studentRepository.countByIelts(7));
 
         studentRepository.findByNameContainingIgnoreCase("doe").forEach(p-> System.out.println(p.toString()));
     }

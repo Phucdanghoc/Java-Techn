@@ -8,7 +8,7 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student,Integer> {
     List<Student> findByAgeGreaterThanEqual(int x);
 
-    int countByIeltsScore(int x);
+    int countByIelts(int x);
 
     List<Student> findByNameContainingIgnoreCase(String name);
 }

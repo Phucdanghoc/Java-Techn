@@ -9,26 +9,29 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "name")
+    private String name;
     @Column(name = "Email")
     private String email;
     @Column(name = "Age")
     private int age;
-    @Column(name = "IeltsScore")
-    private double ieltsScore;
-    public Student(int id, String name, String email, int age, double ieltsScore) {
+    @Column(name = "Ielts")
+    private double ielts;
+    public Student() {
+
+    }
+    public Student(int id, String name, String email, int age, double ielts) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.age = age;
-        this.ieltsScore = ieltsScore;
+        this.ielts = ielts;
     }
 
-    @Column(name = "name")
-    private String name;
 
-    public Student() {
 
-    }
+
     public int getId() {
         return id;
     }
@@ -61,12 +64,12 @@ public class Student {
         this.age = age;
     }
 
-    public double getIeltsScore() {
-        return ieltsScore;
+    public double getIelts() {
+        return ielts;
     }
 
-    public void setIeltsScore(double ieltsScore) {
-        this.ieltsScore = ieltsScore;
+    public void setIelts(double ielts) {
+        this.ielts = ielts;
     }
 
 
@@ -78,7 +81,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
-                ", ieltsScore=" + ieltsScore +
+                ", ieltsScore=" + ielts +
                 '}';
     }
 }

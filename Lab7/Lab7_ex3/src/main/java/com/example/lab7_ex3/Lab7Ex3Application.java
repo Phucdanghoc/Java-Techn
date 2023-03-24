@@ -24,10 +24,10 @@ public class Lab7Ex3Application  implements CommandLineRunner {
         Student student2 = new Student(2,"Jane Smith","jane.smith@example.com", 21,  7.0);
         Student student3 = new Student(3,"Bob Johnson","bob.johnson@example.com", 30,  6.0);
 
-        studentService.save(student2);
-//        studentService.add(student3);
+//        studentService.save(student1);
+//        studentService.save(student3);
 
-//        studentService.getAll().forEach(p-> System.out.println(p.toString()));
+        studentService.findAll().forEach(p-> System.out.println(p.getId()));
 //        System.out.println("\n ");
 //        System.out.println("\n ");
 //
